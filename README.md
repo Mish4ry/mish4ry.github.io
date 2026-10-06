@@ -1,2 +1,2 @@
 # Portfolio
-Misha | CS Student - Cybersecurity &amp; Web Development
+Misha | CS Student - Cybersecurity & Web Development
