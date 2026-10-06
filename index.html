@@ -15,64 +15,169 @@
 </head>
 
 <body>
+  <nav class="navbar">
+    <h2>Mishary</h2>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#cybersecurity">Cybersecurity</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#" class="cv">Download CV</a>
+  </nav>
 
   <header>
-    <div class="intro-row">
-      <div class="intro-text">
-        <h1>I'm Misha, CS Student</h1>
-        <p class="subtitle">Focusing on code and cyber-security.</p>
-      </div>
-      <div class="avatar">
-        <img src="asset/img/spider_glitch.jpg" alt="Avatar Spider-Man" class="avatar-zoom">
-      </div>
+    <p class="status">
+      <i aria-hidden="true"></i>
+      <span>Looking for <span class="ph">an internship or work-study</span></span>
+    </p>
+    <h1>I build web projects and learn to secure them.</h1>
+    <h3>Computer Science Student. Write code for school and for experience. <br> Moving to Cybersecurity</h3>
+    <div class="avatar" aria-hidden="true">
+      <span class="l1"></span>
+      <span class="l2"></span>
+      <span class="face">M</span>
     </div>
+    <button class="project">See Projects</button>
+    <button class="btn-contact">Contact me</button>
   </header>
 
   <main>
-    <div class="time">
-      <div class="year-2025">
-        <h2>The Real Beginning</h2>
-        <div class="subject">
-          <p>I started coding for school and for fun, I started by vibe-coding but I realised that <cite>It's
-              not me, it's not my work</cite> so I stopped and started learning Coding</p>
-        </div>
+    <section class="projects" id="projects">
+      <h2>Projects</h2>
+      <h3>A selection from my Github</h3>
+      <div class="card">
+        <img src="" alt="" class="preview">
+        <h3>Titre</h3>
+        <span class="language">language</span>
+        <p>Description</p>
+        <span class="category">categorie</span>
+        <a href="#" target="_blank">Code</a>
+        <a href="#" target="_blank">Demo</a>
       </div>
-
-      <div class="year-2026">
-        <h2>Cyber or Code</h2>
-        <div class="subject">
-          <p>I was searching about IT and I saw a few people talk about Cyber-Security so I kept
-            watching more and more videos and news about it and then I realised that I wanted to be in
-            Cyber, and I started learning Cyber</p>
-        </div>
-
-        <div id="projects-list" class="projects-container">
-          <div class="project">Syncing repositories...</div>
-        </div>
+      <div class="card">
+        <img src="" alt="" class="preview">
+        <h3>Titre</h3>
+        <span class="language">language</span>
+        <p>Description</p>
+        <span class="category">categorie</span>
+        <a href="#" target="_blank">Code</a>
+        <a href="#" target="_blank">Demo</a>
       </div>
-    </div>
+      <div class="card">
+        <img src="" alt="" class="preview">
+        <h3>Titre</h3>
+        <span class="language">language</span>
+        <p>Description</p>
+        <span class="category">categorie</span>
+        <a href="#" target="_blank">Code</a>
+        <a href="#" target="_blank">Demo</a>
+      </div>
+      <div class="card">
+        <img src="" alt="" class="preview">
+        <h3>Titre</h3>
+        <span class="language">language</span>
+        <p>Description</p>
+        <span class="category">categorie</span>
+        <a href="#" target="_blank">Code</a>
+        <a href="#" target="_blank">Demo</a>
+      </div>
+      <div class="card">
+        <img src="" alt="" class="preview">
+        <h3>Titre</h3>
+        <span class="language">language</span>
+        <p>Description</p>
+        <span class="category">categorie</span>
+        <a href="#" target="_blank">Code</a>
+        <a href="#" target="_blank">Demo</a>
+      </div>
+      <div class="card">
+        <img src="" alt="" class="preview">
+        <h3>Titre</h3>
+        <span class="language">language</span>
+        <p>Description</p>
+        <span class="category">categorie</span>
+        <a href="#" target="_blank">Code</a>
+        <a href="#" target="_blank">Demo</a>
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <h2>Skills</h2>
+      <h3>What I use today, and what I am still learning.</h3>
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <p class="know">HTML</p>
+        <p class="know">CSS</p>
+        <p class="know">Python</p>
+        <p class="know">Javascript</p>
+        <p class="know">SQL</p>
+      </div>
+      <div class="skill-group">
+        <h3>Web and Data</h3>
+        <p class="know">Github</p>
+        <p class="know">Database</p>
+        <p class="unknown">Node.js</p>
+      </div>
+      <div class="skill-group">
+        <h3>Cybersecurity</h3>
+        <p class="unknown">Linux</p>
+        <p class="unknown">Networking</p>
+        <p class="unknown">TryHackMe</p>
+        <p class="unknown">Web Secutity</p>
+      </div>
+      <div class="skill-group">
+        <h3>Tools</h3>
+        <p class="know">Git</p>
+        <p class="know">Github pages</p>
+        <p class="know">VS Code</p>
+      </div>
+      <div class="legend-know">
+        <h3>Know</h3>
+      </div>
+      <div class="legend-learn">
+        <h3>Learning</h3>
+      </div>
+    </section>
+
+    <section class="cybersecurity" id="cybersecurity">
+      <h2>Cybersecurity</h2>
+      <h3>Labs, CTFs and write-ups. Each entry says what the goal was, what I tried, and what I learned.</h3>
+      <div class="lab">
+        <h3>Room or CTF name</h3>
+        <p>TryHackMe</p>
+        <p>I started by doing the few free modules in Cyber</p>
+      </div>
+      <div class="lab">
+        <h3>Second lab name</h3>
+        <p>Platform</p>
+        <p>Description</p>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2>About</h2>
+      <p>I'm Misha, a computer science student. I started coding for school and for experience, and I began with
+        vibe-coding.</p>
+      <p>Then I realized it wasn't my work, so I stopped and learned to write and understand the code myself. I
+        still use AI as a tool, but I want to know why the code works.</p>
+      <p>While reading about IT, I kept running into cybersecurity. I watched more and more about it, and decided
+        that's where I want to go.</p>
+      <p>My first computer experience was games: Counter-Strike, Minecraft and World of Warcraft. That curiosity
+        is still what drives me.</p>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <h2>Curious about my work? Let's talk.</h2>
+      <p>Always available for talking</p>
+      <button>Email me</button>
+      <button>Download CV</button>
+      <p>Github <a href="#">Mish4ry</a></p>
+      <p>Discord <a href="#">mish4ry_</a></p>
+    </section>
   </main>
 
   <footer>
-    <hr class="separator">
-    <div class="footer-content">
-      <p>Contact :</p>
-      <div class="social-links">
-        <a href="https://discord.com/users/1548809126711402587" target="_blank" rel="noopener noreferrer"
-          class="link-item">
-          <span class="platform">Discord</span>
-          <span class="handle">mish4ry_</span>
-        </a>
-        <a href="https://github.com/Mish4ry" target="_blank" rel="noopener noreferrer" class="link-item">
-          <span class="platform">Github</span>
-          <span class="handle">Mish4ry</span>
-        </a>
-        <a href="mailto:Misha.vito@proton.me" class="link-item">
-          <span class="platform">Email</span>
-          <span class="handle">Misha.vito@proton.me</span>
-        </a>
-      </div>
-    </div>
+    <p>Mishary, 2026</p>
   </footer>
 
   <script src="projects.js" defer></script>
