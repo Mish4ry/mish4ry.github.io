@@ -1,3 +1,6 @@
+/*=================================================================
+  Variables
+=================================================================*/
 :root {
   --base: #24273a;
   --mantle: #1e2030;
@@ -8,4 +11,27 @@
   --mauve: #c6a0f6;
   --blue: #8aadf4;
   --green: #a6da95;
+}
+
+@font-face {
+  font-family: Satoshi;
+  src: url(asset/font/Satoshi/Satoshi-Variable.ttf);
+  font-family: Satoshi-italic;
+  src: url(asset/font/Satoshi/Satoshi-VariableItalic.ttf);
+  font-family: Tanker;
+  src: url(asset/font/Tanker/Tanker-Regular.otf);
+}
+
+/*=================================================================
+  Style
+=================================================================*/
+
+body {
+  background-color: var(--base);
+}
+
+.navbar h2 {
+  color: var(--green);
+  font-family: Tanker;
+  font-size: 30px;
 }
