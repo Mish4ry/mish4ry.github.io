@@ -1,9 +1,11 @@
 /*=================================================================
   Variables
 =================================================================*/
+
 :root {
   --base: #24273a;
   --mantle: #1e2030;
+  --crust: #181926;
   --surface-0: #363a4f;
   --surface-1: #494d64;
   --text: #cad3f5;
@@ -12,42 +14,72 @@
   --blue: #8aadf4;
   --green: #a6da95;
   --peach: #f5a97f;
-  --crust: #181926;
+  --mauve-soft: color-mix(in srgb, var(--mauve) 26%, transparent);
+
+
+  --page-width: 1080px;
+  --gutter: max(1.5rem, calc((100% - var(--page-width)) / 2));
+
+  --card-pad: 12px;
+  --card-radius: 20px;
+}
+
+/*=================================================================
+  Fonts
+=================================================================*/
+
+@font-face {
+  font-family: "Tanker";
+  src: url("asset/font/Tanker/Tanker-Regular.otf") format("opentype");
+  font-display: swap;
 }
 
 @font-face {
-  font-family: Tanker;
-  src: url(asset/font/Tanker/Tanker-Regular.otf);
+  font-family: "Satoshi";
+  src: url("asset/font/Satoshi/Satoshi-Variable.ttf") format("truetype");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: Satoshi-italic;
-  src: url(asset/font/Satoshi/Satoshi-VariableItalic.ttf);
-}
-
-@font-face {
-  font-family: Satoshi;
-  src: url(asset/font/Satoshi/Satoshi-Variable.ttf);
+  font-family: "Satoshi";
+  src: url("asset/font/Satoshi/Satoshi-VariableItalic.ttf") format("truetype");
+  font-weight: 300 900;
+  font-style: italic;
+  font-display: swap;
 }
 
 /*=================================================================
   Base
 =================================================================*/
 
-body {
-  background-color: var(--base);
-  color: var(--text);
-  margin: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-header {
-  font-family: Satoshi;
-  padding-top: 5rem;
-  padding-inline: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+body {
+  margin: 0;
+  background-color: var(--base);
+  color: var(--text);
+  font-family: "Satoshi", system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--mauve);
+}
+
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+section {
+  padding-block: 4rem;
+  padding-inline: var(--gutter);
 }
 
 /*=================================================================
@@ -55,7 +87,6 @@ header {
 =================================================================*/
 
 .navbar {
-  background-color: var(--surface-0);
   position: absolute;
   top: 0;
   left: 0;
@@ -63,25 +94,24 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: 1rem var(--gutter);
+  background-color: var(--surface-0);
 }
 
 .brand {
-  font-weight: 800;
-  font-size: 35px;
+  font-family: "Tanker", sans-serif;
+  font-size: 2.2rem;
   color: var(--text);
   text-decoration: none;
-  font-family: Tanker;
 }
 
 .nav-links {
-  font-family: Satoshi;
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .nav-links a {
@@ -93,32 +123,96 @@ header {
   color: var(--text);
 }
 
-.cv {
+.nav-links a.cv {
+  padding: 0.4rem 0.8rem;
   border: 1.5px solid var(--mauve);
   border-radius: 8px;
-  padding: 0.4rem 0.8rem;
   color: var(--mauve);
 }
 
-.cv:hover {
-  background-color: #c7a0f642;
+.nav-links a.cv:hover {
+  background-color: var(--mauve-soft);
+  color: var(--mauve);
+}
+
+@media (max-width: 680px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+  }
 }
 
 /*=================================================================
-  Header
+  Header (hero)
 =================================================================*/
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-block: 9rem 4rem;
+  padding-inline: var(--gutter);
+}
+
+.hero-text {
+  max-width: 36rem;
+}
+
 header h1 {
-  font-size: 50px;
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  line-height: 1.1;
 }
 
-header h3 {
-  font-size: 25px;
-}
-
-header a {
+.lead {
+  margin: 1rem 0 0;
+  font-size: 1.25rem;
   color: var(--sub);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.15rem;
+  border: 1.5px solid var(--mauve);
+  border-radius: 8px;
+  color: var(--mauve);
+  font-weight: 700;
   text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--mauve);
+  color: var(--base);
+}
+
+.btn.primary {
+  background: var(--mauve);
+  color: var(--base);
+}
+
+.btn.primary:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+@media (max-width: 680px) {
+  header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
 }
 
 /*=================================================================
@@ -149,11 +243,127 @@ header a {
 }
 
 .avatar .face {
-  background: var(--crust);
   display: grid;
   place-items: center;
+  background: var(--crust);
+  color: var(--text);
   font-size: clamp(4rem, 9vw, 7rem);
   font-weight: 800;
   line-height: 1;
-  color: var(--text);
 }
+
+/*=================================================================
+  Projects
+=================================================================*/
+
+.projects {
+  background-color: var(--mantle);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: var(--card-pad);
+  background-color: var(--surface-0);
+  border-radius: var(--card-radius);
+  text-align: center;
+}
+
+.card>* {
+  margin: 0;
+}
+
+.card .preview {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: calc(var(--card-radius) - var(--card-pad));
+}
+
+.card-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.card .code {
+  padding: 0.7rem 1.15rem;
+  border: 1.5px solid var(--mauve);
+  border-radius: 8px;
+  color: var(--mauve);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.card .code:hover {
+  background: var(--mauve);
+  color: var(--base);
+}
+
+.card .demo {
+  color: var(--base);
+  background-color: var(--mauve);
+  border: 1.5px solid var(--mauve);
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.7rem 1.15rem;
+}
+
+.card .demo:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*=================================================================
+  skills
+=================================================================*/
+
+
+
+/*=================================================================
+  Cybersecurity
+=================================================================*/
+
+.cybersecurity {
+  background-color: var(--mantle);
+}
+
+/*=================================================================
+  About
+=================================================================*/
+
+
+
+/*=================================================================
+  Contact
+=================================================================*/
+
+.contact {
+  background-color: var(--mantle);
+}
+
+/*=================================================================
+  Footer
+=================================================================*/

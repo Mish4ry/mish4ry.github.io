@@ -11,11 +11,11 @@
 
   <link rel="stylesheet" href="style.css">
   <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23181825'/><text x='50' y='68' font-size='58' font-family='monospace' font-weight='bold' text-anchor='middle' fill='%23cba6f7'>M</text></svg>">
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23181926'/><text x='50' y='68' font-size='58' font-family='monospace' font-weight='bold' text-anchor='middle' fill='%23c6a0f6'>M</text></svg>">
 </head>
 
 <body>
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Main">
     <a class="brand" href="#top">Misha</a>
     <ul class="nav-links">
       <li><a href="#projects">Projects</a></li>
@@ -28,123 +28,171 @@
   </nav>
 
   <header>
-    <h1>I build web projects and learn to secure them.</h1>
-    <h3>Computer Science Student. Write code for school and for experience. <br> Moving to Cybersecurity</h3>
+    <div class="hero-text">
+      <h1>I build web projects and learn to secure them.</h1>
+      <p class="lead">Computer Science Student. I write code for school and for experience, and I'm moving into
+        cybersecurity.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn primary">See Projects</a>
+        <a href="#contact" class="btn">Contact me</a>
+      </div>
+    </div>
+
     <div class="avatar" aria-hidden="true">
       <span class="l1"></span>
       <span class="l2"></span>
       <span class="face">M</span>
     </div>
-    <a class="project">See Projects</a>
-    <a class="btn-contact">Contact me</a>
   </header>
 
   <main>
     <section class="projects" id="projects">
       <h2>Projects</h2>
-      <h3>A selection from my Github</h3>
-      <div class="card">
-        <img src="" alt="" class="preview">
-        <h3>Titre</h3>
-        <span class="language">language</span>
-        <p>Description</p>
-        <span class="category">categorie</span>
-        <a href="#" target="_blank">Code</a>
-        <a href="#" target="_blank">Demo</a>
-      </div>
-      <div class="card">
-        <img src="" alt="" class="preview">
-        <h3>Titre</h3>
-        <span class="language">language</span>
-        <p>Description</p>
-        <span class="category">categorie</span>
-        <a href="#" target="_blank">Code</a>
-        <a href="#" target="_blank">Demo</a>
-      </div>
-      <div class="card">
-        <img src="" alt="" class="preview">
-        <h3>Titre</h3>
-        <span class="language">language</span>
-        <p>Description</p>
-        <span class="category">categorie</span>
-        <a href="#" target="_blank">Code</a>
-        <a href="#" target="_blank">Demo</a>
-      </div>
-      <div class="card">
-        <img src="" alt="" class="preview">
-        <h3>Titre</h3>
-        <span class="language">language</span>
-        <p>Description</p>
-        <span class="category">categorie</span>
-        <a href="#" target="_blank">Code</a>
-        <a href="#" target="_blank">Demo</a>
-      </div>
-      <div class="card">
-        <img src="" alt="" class="preview">
-        <h3>Titre</h3>
-        <span class="language">language</span>
-        <p>Description</p>
-        <span class="category">categorie</span>
-        <a href="#" target="_blank">Code</a>
-        <a href="#" target="_blank">Demo</a>
-      </div>
-      <div class="card">
-        <img src="" alt="" class="preview">
-        <h3>Titre</h3>
-        <span class="language">language</span>
-        <p>Description</p>
-        <span class="category">categorie</span>
-        <a href="#" target="_blank">Code</a>
-        <a href="#" target="_blank">Demo</a>
+      <p class="lead">A selection from my GitHub</p>
+      <br>
+
+      <div class="projects-grid">
+        <article class="card">
+          <img src="asset/img/placehorlder.png" alt="Project screenshot" class="preview" loading="lazy">
+          <h3>Title</h3>
+          <span class="language">language</span>
+          <p>Description</p>
+          <p class="status">Status (Boolean)</p>
+          <span class="category">Category</span>
+          <div class="card-links">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="code">Code</a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="demo">Demo</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="asset/img/placehorlder.png" alt="Project screenshot" class="preview" loading="lazy">
+          <h3>Title</h3>
+          <span class="language">language</span>
+          <p>Description</p>
+          <p class="status">Status (Boolean)</p>
+          <span class="category">Category</span>
+          <div class="card-links">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="code">Code</a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="demo">Demo</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="asset/img/placehorlder.png" alt="Project screenshot" class="preview" loading="lazy">
+          <h3>Title</h3>
+          <span class="language">language</span>
+          <p>Description</p>
+          <p class="status">Status (Boolean)</p>
+          <span class="category">Category</span>
+          <div class="card-links">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="code">Code</a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="demo">Demo</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="asset/img/placehorlder.png" alt="Project screenshot" class="preview" loading="lazy">
+          <h3>Title</h3>
+          <span class="language">language</span>
+          <p>Description</p>
+          <p class="status">Status (Boolean)</p>
+          <span class="category">Category</span>
+          <div class="card-links">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="code">Code</a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="demo">Demo</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="asset/img/placehorlder.png" alt="Project screenshot" class="preview" loading="lazy">
+          <h3>Title</h3>
+          <span class="language">language</span>
+          <p>Description</p>
+          <p class="status">Status (Boolean)</p>
+          <span class="category">Category</span>
+          <div class="card-links">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="code">Code</a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="demo">Demo</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="asset/img/placehorlder.png" alt="Project screenshot" class="preview" loading="lazy">
+          <h3>Title</h3>
+          <span class="language">language</span>
+          <p>Description</p>
+          <p class="status">Status (Boolean)</p>
+          <span class="category">Category</span>
+          <div class="card-links">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="code">Code</a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="demo">Demo</a>
+          </div>
+        </article>
       </div>
     </section>
 
     <section class="skills" id="skills">
       <h2>Skills</h2>
-      <h3>What I use today, and what I am still learning.</h3>
-      <div class="skill-group">
-        <h3>Languages</h3>
-        <p class="know">HTML</p>
-        <p class="know">CSS</p>
-        <p class="know">Python</p>
-        <p class="know">Javascript</p>
-        <p class="know">SQL</p>
+      <p class="lead">What I use today, and what I am still learning.</p>
+
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <ul class="chips">
+            <li class="know">HTML</li>
+            <li class="know">CSS</li>
+            <li class="know">Python</li>
+            <li class="know">JavaScript</li>
+            <li class="know">SQL</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Web and Data</h3>
+          <ul class="chips">
+            <li class="know">GitHub</li>
+            <li class="know">Database</li>
+            <li class="learning">Node.js</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Cybersecurity</h3>
+          <ul class="chips">
+            <li class="learning">Linux</li>
+            <li class="learning">Networking</li>
+            <li class="learning">TryHackMe</li>
+            <li class="learning">Web Security</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Tools</h3>
+          <ul class="chips">
+            <li class="know">Git</li>
+            <li class="know">GitHub Pages</li>
+            <li class="know">VS Code</li>
+          </ul>
+        </div>
       </div>
-      <div class="skill-group">
-        <h3>Web and Data</h3>
-        <p class="know">Github</p>
-        <p class="know">Database</p>
-        <p class="unknown">Node.js</p>
-      </div>
-      <div class="skill-group">
-        <h3>Cybersecurity</h3>
-        <p class="unknown">Linux</p>
-        <p class="unknown">Networking</p>
-        <p class="unknown">TryHackMe</p>
-        <p class="unknown">Web Secutity</p>
-      </div>
-      <div class="skill-group">
-        <h3>Tools</h3>
-        <p class="know">Git</p>
-        <p class="know">Github pages</p>
-        <p class="know">VS Code</p>
-      </div>
-      <div class="legend-know">
-        <h3>Know</h3>
-      </div>
-      <div class="legend-learn">
-        <h3>Learning</h3>
-      </div>
+
+      <p class="legend">
+        <span class="legend-know">Used regularly</span>
+        <span class="legend-learn">Learning</span>
+      </p>
     </section>
 
     <section class="cybersecurity" id="cybersecurity">
       <h2>Cybersecurity</h2>
-      <h3>Labs, CTFs and write-ups. Each entry says what the goal was, what I tried, and what I learned.</h3>
+      <p class="lead">Labs, CTFs and write-ups. Each entry says what the goal was, what I tried, and what I learned.</p>
+
       <div class="lab">
         <h3>Room or CTF name</h3>
         <p>TryHackMe</p>
         <p>I started by doing the few free modules in Cyber</p>
       </div>
+
       <div class="lab">
         <h3>Second lab name</h3>
         <p>Platform</p>
@@ -164,13 +212,19 @@
         is still what drives me.</p>
     </section>
 
-    <section class="contact-section" id="contact">
+    <section class="contact" id="contact">
       <h2>Curious about my work? Let's talk.</h2>
-      <p>Always available for talking</p>
-      <button>Email me</button>
-      <button>Download CV</button>
-      <p>Github <a href="#">Mish4ry</a></p>
-      <p>Discord <a href="#">mish4ry_</a></p>
+      <p class="lead">Always available for talking</p>
+
+      <div class="hero-actions">
+        <a href="#" class="btn primary">Email me</a>
+        <a href="#" class="btn">Download CV</a>
+      </div>
+
+      <ul class="elsewhere">
+        <li>GitHub <a href="#" target="_blank" rel="noopener noreferrer">Mish4ry</a></li>
+        <li>Discord <a href="#" target="_blank" rel="noopener noreferrer">mish4ry_</a></li>
+      </ul>
     </section>
   </main>
 
