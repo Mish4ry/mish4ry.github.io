@@ -11,27 +11,149 @@
   --mauve: #c6a0f6;
   --blue: #8aadf4;
   --green: #a6da95;
+  --peach: #f5a97f;
+  --crust: #181926;
+}
+
+@font-face {
+  font-family: Tanker;
+  src: url(asset/font/Tanker/Tanker-Regular.otf);
+}
+
+@font-face {
+  font-family: Satoshi-italic;
+  src: url(asset/font/Satoshi/Satoshi-VariableItalic.ttf);
 }
 
 @font-face {
   font-family: Satoshi;
   src: url(asset/font/Satoshi/Satoshi-Variable.ttf);
-  font-family: Satoshi-italic;
-  src: url(asset/font/Satoshi/Satoshi-VariableItalic.ttf);
-  font-family: Tanker;
-  src: url(asset/font/Tanker/Tanker-Regular.otf);
 }
 
 /*=================================================================
-  Style
+  Base
 =================================================================*/
 
 body {
   background-color: var(--base);
+  color: var(--text);
+  margin: 0;
 }
 
-.navbar h2 {
-  color: var(--green);
+header {
+  font-family: Satoshi;
+  padding-top: 5rem;
+  padding-inline: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/*=================================================================
+  Navbar
+=================================================================*/
+
+.navbar {
+  background-color: var(--surface-0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 35px;
+  color: var(--text);
+  text-decoration: none;
   font-family: Tanker;
-  font-size: 30px;
+}
+
+.nav-links {
+  font-family: Satoshi;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--sub);
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.cv {
+  border: 1.5px solid var(--mauve);
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  color: var(--mauve);
+}
+
+.cv:hover {
+  background-color: #c7a0f642;
+}
+
+/*=================================================================
+  Header
+=================================================================*/
+
+header h1 {
+  font-size: 50px;
+}
+
+header h3 {
+  font-size: 25px;
+}
+
+header a {
+  color: var(--sub);
+  text-decoration: none;
+}
+
+/*=================================================================
+  Avatar
+=================================================================*/
+
+.avatar {
+  position: relative;
+  width: clamp(150px, 22vw, 250px);
+  aspect-ratio: 1;
+  margin: 1.5rem 12px;
+}
+
+.avatar>* {
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+}
+
+.avatar .l1 {
+  background: var(--mauve);
+  transform: translate(-12px, 10px);
+}
+
+.avatar .l2 {
+  background: var(--blue);
+  transform: translate(12px, -10px);
+}
+
+.avatar .face {
+  background: var(--crust);
+  display: grid;
+  place-items: center;
+  font-size: clamp(4rem, 9vw, 7rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--text);
 }
