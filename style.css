@@ -3,6 +3,7 @@
 =================================================================*/
 
 :root {
+  /* Catppuccin Macchiato */
   --base: #24273a;
   --mantle: #1e2030;
   --crust: #181926;
@@ -16,10 +17,11 @@
   --peach: #f5a97f;
   --mauve-soft: color-mix(in srgb, var(--mauve) 26%, transparent);
 
-
+  /* Layout: side padding that keeps content centered, max 1080px wide */
   --page-width: 1080px;
   --gutter: max(1.5rem, calc((100% - var(--page-width)) / 2));
 
+  /* Cards */
   --card-pad: 12px;
   --card-radius: 20px;
 }
@@ -80,6 +82,52 @@ a {
 section {
   padding-block: 4rem;
   padding-inline: var(--gutter);
+}
+
+/* Darker sections (they alternate with the page background) */
+.projects,
+.cybersecurity,
+.contact,
+footer {
+  background-color: var(--mantle);
+}
+
+.lead {
+  margin: 1rem 0 0;
+  font-size: 1.25rem;
+  color: var(--sub);
+}
+
+/*=================================================================
+  Buttons
+=================================================================*/
+
+.btn,
+.card .code,
+.card .demo {
+  display: inline-block;
+  padding: 0.7rem 1.15rem;
+  border: 1.5px solid var(--mauve);
+  border-radius: 8px;
+  color: var(--mauve);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Filled variant */
+.btn.primary,
+.card .demo {
+  background: var(--mauve);
+  color: var(--base);
+}
+
+/* Hover comes after the filled variant, so it wins for both */
+.btn:hover,
+.card .code:hover,
+.card .demo:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: var(--base);
 }
 
 /*=================================================================
@@ -170,42 +218,11 @@ header h1 {
   line-height: 1.1;
 }
 
-.lead {
-  margin: 1rem 0 0;
-  font-size: 1.25rem;
-  color: var(--sub);
-}
-
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
   margin-top: 2rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.7rem 1.15rem;
-  border: 1.5px solid var(--mauve);
-  border-radius: 8px;
-  color: var(--mauve);
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.btn:hover {
-  background: var(--mauve);
-  color: var(--base);
-}
-
-.btn.primary {
-  background: var(--mauve);
-  color: var(--base);
-}
-
-.btn.primary:hover {
-  background: var(--blue);
-  border-color: var(--blue);
 }
 
 @media (max-width: 680px) {
@@ -256,10 +273,6 @@ header h1 {
   Projects
 =================================================================*/
 
-.projects {
-  background-color: var(--mantle);
-}
-
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -295,35 +308,6 @@ header h1 {
   margin-top: auto;
 }
 
-.card .code {
-  padding: 0.7rem 1.15rem;
-  border: 1.5px solid var(--mauve);
-  border-radius: 8px;
-  color: var(--mauve);
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.card .code:hover {
-  background: var(--mauve);
-  color: var(--base);
-}
-
-.card .demo {
-  color: var(--base);
-  background-color: var(--mauve);
-  border: 1.5px solid var(--mauve);
-  border-radius: 8px;
-  font-weight: 700;
-  text-decoration: none;
-  padding: 0.7rem 1.15rem;
-}
-
-.card .demo:hover {
-  background: var(--blue);
-  border-color: var(--blue);
-}
-
 @media (max-width: 900px) {
   .projects-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -337,33 +321,185 @@ header h1 {
 }
 
 /*=================================================================
-  skills
+  Skills
 =================================================================*/
 
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem 3rem;
+}
 
+.skill-group {
+  text-align: center;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-group .chips {
+  justify-content: center;
+}
+
+.chips li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.2rem 0.7rem;
+  border: 1px solid var(--surface-1);
+  border-radius: 6px;
+}
+
+.chips li.learning {
+  border-style: dashed;
+  color: var(--sub);
+}
+
+.skill-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  flex: none;
+  color: var(--mauve);
+}
+
+.learning .skill-icon {
+  color: var(--sub);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  margin: 2rem 0 0;
+  color: var(--sub);
+  font-size: 0.95rem;
+}
+
+.legend-know,
+.legend-learn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-know::before,
+.legend-learn::before {
+  content: "";
+  flex: none;
+  width: 1.6rem;
+  height: 0.8rem;
+  border: 1px solid var(--surface-1);
+  border-radius: 4px;
+}
+
+.legend-learn::before {
+  border-style: dashed;
+}
 
 /*=================================================================
   Cybersecurity
 =================================================================*/
 
-.cybersecurity {
-  background-color: var(--mantle);
+.lab {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-width: 48rem;
+  padding: 1.1rem 1.25rem;
+  background-color: var(--surface-0);
+  border-left: 4px solid var(--green);
+  border-radius: 4px var(--card-radius) var(--card-radius) 4px;
+}
+
+.lab>* {
+  margin: 0;
+}
+
+.lead+.lab {
+  margin-top: 2rem;
+}
+
+.lab+.lab {
+  margin-top: 1rem;
+}
+
+.lab h3 {
+  font-size: 1.2rem;
+}
+
+.lab p:first-of-type {
+  color: var(--green);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.lab p:last-of-type {
+  color: var(--sub);
 }
 
 /*=================================================================
   About
 =================================================================*/
 
+.about p {
+  font-size: 1.25rem;
+}
 
+.about span,
+.about cite {
+  color: var(--blue);
+}
 
 /*=================================================================
   Contact
 =================================================================*/
 
-.contact {
-  background-color: var(--mantle);
+.elsewhere {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+
+.elsewhere a {
+  display: inline-block;
+  padding: 0.7rem 1.15rem;
+  border: 1.5px solid;
+  border-radius: 8px;
+  color: var(--blue);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.elsewhere .second {
+  background-color: var(--blue);
+  color: var(--base);
+}
+
+.elsewhere a:hover {
+  background-color: var(--mauve);
+  color: var(--base);
 }
 
 /*=================================================================
   Footer
 =================================================================*/
+
+footer {
+  padding: 1.5rem var(--gutter);
+  color: var(--sub);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
