@@ -138,6 +138,7 @@ footer {
   align-items: center;
   padding: 1rem var(--gutter);
   background-color: var(--surface-0);
+  z-index: 50;
 }
 
 .brand {
@@ -145,6 +146,37 @@ footer {
   font-size: 2.2rem;
   color: var(--text);
   text-decoration: none;
+}
+
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--text);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.burger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .nav-links {
@@ -178,16 +210,40 @@ footer {
 }
 
 @media (max-width: 680px) {
-  .navbar {
-    flex-wrap: wrap;
-    gap: 0.5rem;
+  .burger {
+    display: flex;
   }
 
   .nav-links {
-    flex-wrap: wrap;
-    gap: 0.5rem 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.5rem var(--gutter);
+    background-color: var(--surface-0);
+    border-top: 1px solid var(--surface-1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li,
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a.cv {
+    display: inline-block;
+    width: auto;
   }
 }
+
 
 /*=================================================================
   Header (hero)
