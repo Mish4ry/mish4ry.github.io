@@ -493,6 +493,17 @@ header h1 {
   color: var(--base);
 }
 
+.elsewhere .special {
+  color: var(--peach);
+  border-color: var(--peach);
+}
+
+.elsewhere .special:hover {
+  background-color: var(--peach);
+  border-color: var(--peach);
+  color: var(--base);
+}
+
 /*=================================================================
   Footer
 =================================================================*/
