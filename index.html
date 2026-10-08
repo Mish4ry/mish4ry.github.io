@@ -17,6 +17,11 @@
 <body>
   <nav class="navbar" aria-label="Main">
     <a class="brand" href="#top">Misha</a>
+    <button class="burger" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <ul class="nav-links">
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -26,6 +31,7 @@
       <li><a href="https://forms.gle/4yR9eEpc3pcREheQ7" class="cv">Download CV</a></li>
     </ul>
   </nav>
+
 
   <header>
     <div class="hero-text">
@@ -325,7 +331,26 @@
     <p>Mishary, 2026</p>
   </footer>
 
-  <script src="projects.js" defer></script>
+  <script src"" defer>
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+    const links = document.querySelectorAll('.nav-links a');
+
+    burger.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      burger.classList.toggle('active', isOpen);
+      burger.setAttribute('aria-expanded', isOpen);
+    });
+
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        burger.classList.remove('active');
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+  </script>
 </body>
 
 </html>
