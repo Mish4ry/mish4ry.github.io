@@ -3,7 +3,6 @@
 =================================================================*/
 
 :root {
-  /* Catppuccin Macchiato */
   --base: #24273a;
   --mantle: #1e2030;
   --crust: #181926;
@@ -17,11 +16,9 @@
   --peach: #f5a97f;
   --mauve-soft: color-mix(in srgb, var(--mauve) 26%, transparent);
 
-  /* Layout: side padding that keeps content centered, max 1080px wide */
   --page-width: 1080px;
   --gutter: max(1.5rem, calc((100% - var(--page-width)) / 2));
 
-  /* Cards */
   --card-pad: 12px;
   --card-radius: 20px;
 }
@@ -84,7 +81,6 @@ section {
   padding-inline: var(--gutter);
 }
 
-/* Darker sections (they alternate with the page background) */
 .projects,
 .cybersecurity,
 .contact,
@@ -114,14 +110,12 @@ footer {
   text-decoration: none;
 }
 
-/* Filled variant */
 .btn.primary,
 .card .demo {
   background: var(--mauve);
   color: var(--base);
 }
 
-/* Hover comes after the filled variant, so it wins for both */
 .btn:hover,
 .card .code:hover,
 .card .demo:hover {
