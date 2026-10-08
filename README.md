@@ -5,7 +5,7 @@ Personal portfolio website, built with plain HTML, CSS and JavaScript.
 
 **Live:** https://mish4ry.github.io/My-Portfolio/
 
-Preview of the website : Not available for the moment
+![Preview](asset/img/Misha%20-%20CS%20Student%20in%20Cyber.png)
 
 ## Features
 
