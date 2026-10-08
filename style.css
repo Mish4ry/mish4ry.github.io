@@ -295,6 +295,16 @@ header h1 {
   border-radius: calc(var(--card-radius) - var(--card-pad));
 }
 
+.card .preview[src*="Moria.png"] {
+  object-position: top;
+}
+
+.card .preview[src*="Koya_logo.png"] {
+  object-fit: contain;
+  padding: 1.5rem;
+  background-color: var(--crust);
+}
+
 .card-links {
   display: flex;
   justify-content: center;
@@ -480,6 +490,17 @@ header h1 {
 
 .elsewhere a:hover {
   background-color: var(--mauve);
+  color: var(--base);
+}
+
+.elsewhere .special {
+  color: var(--peach);
+  border-color: var(--peach);
+}
+
+.elsewhere .special:hover {
+  background-color: var(--peach);
+  border-color: var(--peach);
   color: var(--base);
 }
 
