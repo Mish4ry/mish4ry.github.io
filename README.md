@@ -1,7 +1,8 @@
 # Portfolio
 
 Misha | CS Student - Cybersecurity & Web Development
-Personal portfolio website, built with plain HTML, CSS and JavaScript.
+
+Personal portfolio website, built with plain HTML, CSS, and vanilla JavaScript.
 
 **Live:** https://mish4ry.github.io/
 
@@ -9,13 +10,15 @@ Personal portfolio website, built with plain HTML, CSS and JavaScript.
 
 ## Features
 
-- Projects section synced automatically from the GitHub API
-- Dark theme based on the Catppuccin Mocha palette
+- Curated showcase of development projects and cybersecurity labs
+- Custom dark theme based on the Catppuccin Mocha palette
+- Typography pairing using Tanker and Satoshi
+- Privacy-conscious CV distribution via a dedicated request form
+- Fully responsive layout built without external frameworks
 
 ## Stack
 
-- HTML / CSS / vanilla JavaScript
-- GitHub API
+- HTML5 / CSS3 / Vanilla JavaScript
 - Hosted on GitHub Pages
 
 ## License
