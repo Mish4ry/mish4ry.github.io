@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    :root {
+      --mauve: #cba6f7;
+      --blue: #89b4fa;
+      --crust: #11111b;
+      --text: #cdd6f4;
+    }
+    .layer {
+      rx: 16px;
+      ry: 16px;
+    }
+    .l1 {
+      fill: var(--mauve);
+      transform: translate(-5px, 4px);
+    }
+    .l2 {
+      fill: var(--blue);
+      transform: translate(5px, -4px);
+    }
+    .face {
+      fill: var(--crust);
+    }
+    .text {
+      fill: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 42px;
+      font-weight: 800;
+      text-anchor: middle;
+      dominant-baseline: central;
+    }
+  </style>
+
+  <!-- Calque inférieur (mauve) -->
+  <rect class="layer l1" x="14" y="14" width="72" height="72" />
+
+  <!-- Calque intermédiaire (bleu) -->
+  <rect class="layer l2" x="14" y="14" width="72" height="72" />
+
+  <!-- Carré principal (face) -->
+  <rect class="layer face" x="14" y="14" width="72" height="72" />
+
+  <!-- Lettre centrale -->
+  <text class="text" x="50" y="50">M</text>
+</svg>
