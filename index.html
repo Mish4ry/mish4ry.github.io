@@ -12,10 +12,8 @@
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'sha256-lTTM3Q1lk0993wOxy3Su4i0LV2JQfc7pcOXGX52vuUM='; connect-src 'self' https://api.github.com; img-src 'self' https://avatars.githubusercontent.com data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; object-src 'none'; base-uri 'self'; form-action 'self';"
-      content="default-src 'self'; connect-src 'self' https://api.github.com; img-src 'self' https://avatars.githubusercontent.com data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; object-src 'none'; base-uri 'self'; form-action 'self';"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'"
     />
-
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/svg+xml" href="asset/img/favicon.svg" />
   </head>
@@ -529,24 +527,6 @@
       <p>Mishary, 2026</p>
     </footer>
 
-    <script>
-      const burger = document.querySelector(".burger");
-      const navLinks = document.querySelector(".nav-links");
-      const links = document.querySelectorAll(".nav-links a");
-
-      burger.addEventListener("click", () => {
-        const isOpen = navLinks.classList.toggle("open");
-        burger.classList.toggle("active", isOpen);
-        burger.setAttribute("aria-expanded", isOpen);
-      });
-
-      links.forEach((link) => {
-        link.addEventListener("click", () => {
-          navLinks.classList.remove("open");
-          burger.classList.remove("active");
-          burger.setAttribute("aria-expanded", "false");
-        });
-      });
-    </script>
+    <script src="script.js" defer></script>
   </body>
 </html>
