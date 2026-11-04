@@ -1,4 +1,3 @@
-// --- Gestion du menu mobile ---
 const burger = document.querySelector(".burger");
 const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links a");
@@ -19,10 +18,8 @@ if (burger && navLinks) {
   });
 }
 
-// Nettoyage de l'ancienne clé localStorage si elle était présente
 localStorage.removeItem("theme");
 
-// --- Cartes détachées et réinsertion dynamique dans le rail ---
 const track = document.querySelector(".projects-track");
 let activeOverlay = null;
 let currentSourceCard = null;
