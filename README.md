@@ -4,7 +4,7 @@ Misha | CS Student - Cybersecurity & Web Development
 
 Personal portfolio website, built with plain HTML, CSS, and vanilla JavaScript.
 
-![Preview](asset/img/new-face.png)
+![Preview](asset/img/Misha%20-%20CS%20Student%20in%20Cyber_V2.png)
 
 ## Features
 
