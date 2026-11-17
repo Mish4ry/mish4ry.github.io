@@ -9,8 +9,9 @@ Personal portfolio website, built with plain HTML, CSS, and vanilla JavaScript.
 ## Features
 
 - Custom dark theme based on the Catppuccin Macchiato palette
-- Typography pairing using Tanker and Satoshi
+- Typography pairing using Tanker and Satoshi and JetBrain Mono
 - Fully responsive layout built without external frameworks
+- Icon from Kubai project
 
 ## Stack
 
