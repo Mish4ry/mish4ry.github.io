@@ -1,0 +1,45 @@
+name: Historique des modifications
+
+on:
+  push:
+    branches:
+      - main # Remplace par 'master' si ta branche principale porte ce nom
+
+permissions:
+  contents: write # Indispensable pour autoriser GitHub à créer des fichiers
+
+jobs:
+  create-changelog:
+    runs-on: ubuntu-latest
+    # Évite une boucle infinie lorsque le bot enregistre la note
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+
+    steps:
+      - name: Récupération du dépôt
+        uses: actions/checkout@v4
+
+      - name: Génération de la note
+        run: |
+          mkdir -p "Modif history"
+          DATE=$(date +'%Y-%m-%d_%H-%M-%S')
+          HASH=$(git rev-parse --short HEAD)
+          MSG=$(git log -1 --pretty=%B)
+          AUTHOR=$(git log -1 --pretty=%an)
+
+          FILE="Modif history/${DATE}_${HASH}.md"
+
+          cat <<EOF > "$FILE"
+          # Modification du $(date +'%d/%m/%Y à %H:%M')
+
+          - **Auteur :** $AUTHOR
+          - **Commit :** \`$HASH\`
+          - **Détails :** $MSG
+          EOF
+
+      - name: Sauvegarde dans GitHub
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "Modif history/"
+          git commit -m "docs: ajout note historique [skip ci]"
+          git push
